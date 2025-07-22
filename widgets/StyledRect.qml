@@ -5,7 +5,7 @@ import QtQuick.Effects
 Rectangle {
     id: root
 
-    property bool enableBackdropBlur: false
+    property bool enableBackdropBlur: true
     property real blurRadius: 25
     property real borderOpacity: 0.2
     
