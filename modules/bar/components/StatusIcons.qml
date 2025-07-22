@@ -7,6 +7,7 @@ import Quickshell.Bluetooth
 import Quickshell.Services.UPower
 import QtQuick
 
+
 Item {
     id: root
 
@@ -22,14 +23,24 @@ Item {
     implicitHeight: network.implicitHeight + bluetooth.implicitHeight + bluetooth.anchors.topMargin + (repeater.count > 0 ? devices.implicitHeight + devices.anchors.topMargin : 0) + battery.implicitHeight + battery.anchors.topMargin
 
     MaterialIcon {
-        id: network
+    id: network
 
-        animate: true
-        text: Network.active ? Icons.getNetworkIcon(Network.active.strength ?? 0) : "wifi_off"
-        color: root.colour
+    animate: true
+    text: Network.active ? Icons.getNetworkIcon(Network.active.strength ?? 0) : "wifi_off"
+    color: root.colour
+    anchors.horizontalCenter: parent.horizontalCenter
 
-        anchors.horizontalCenter: parent.horizontalCenter
+    MouseArea {
+        anchors.fill: parent
+        acceptedButtons: Qt.RightButton
+
+        onClicked: (mouse) => {
+            if (mouse.button === Qt.RightButton) {
+                Quickshell.execDetached(["bash", "-c", "$HOME/.config/quickshell/utils/scripts/toggle-plasma-nm.sh"]);
+            }
+        }
     }
+}
 
     MaterialIcon {
         id: bluetooth
