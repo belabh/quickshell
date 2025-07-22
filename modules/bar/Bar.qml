@@ -91,7 +91,8 @@ Item {
             anchors.topMargin: Appearance.spacing.normal
 
             radius: Appearance.rounding.full
-            color: Colours.palette.m3surfaceContainer
+            color: Colours.alpha(Colours.palette.m3surfaceContainer, true)
+            enableBackdropBlur: true
 
             implicitWidth: workspacesInner.implicitWidth + Appearance.padding.small * 2
             implicitHeight: workspacesInner.implicitHeight + Appearance.padding.small * 2
@@ -153,7 +154,8 @@ Item {
             anchors.bottomMargin: Appearance.spacing.normal
 
             radius: Appearance.rounding.full
-            color: Colours.palette.m3surfaceContainer
+            color: Colours.alpha(Colours.palette.m3surfaceContainer, true)
+            enableBackdropBlur: true
 
             implicitHeight: statusIconsInner.implicitHeight + Appearance.padding.normal * 2
 

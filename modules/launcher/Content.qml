@@ -45,6 +45,7 @@ Item {
 
         color: Colours.alpha(Colours.palette.m3surfaceContainer, true)
         radius: Appearance.rounding.full
+        enableBackdropBlur: true
 
         anchors.left: parent.left
         anchors.right: parent.right
