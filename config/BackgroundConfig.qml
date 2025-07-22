@@ -5,6 +5,6 @@ JsonObject {
     property DesktopClock desktopClock: DesktopClock {}
 
     component DesktopClock: JsonObject {
-        property bool enabled: false
+        property bool enabled: true
     }
 }
