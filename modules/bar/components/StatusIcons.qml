@@ -32,10 +32,10 @@ Item {
 
     MouseArea {
         anchors.fill: parent
-        acceptedButtons: Qt.RightButton
+        acceptedButtons: Qt.LeftButton
 
         onClicked: (mouse) => {
-            if (mouse.button === Qt.RightButton) {
+            if (mouse.button === Qt.LeftButton) {
                 Quickshell.execDetached(["bash", "-c", "$HOME/.config/quickshell/utils/scripts/toggle-plasma-nm.sh"]);
             }
         }
@@ -52,7 +52,18 @@ Item {
         animate: true
         text: Bluetooth.defaultAdapter.enabled ? "bluetooth" : "bluetooth_disabled"
         color: root.colour
+
+        MouseArea {
+        anchors.fill: parent
+        acceptedButtons: Qt.LeftButton
+
+        onClicked: (mouse) => {
+            if (mouse.button === Qt.LeftButton) {
+                Quickshell.execDetached(["bash", "-c", "$HOME/.config/quickshell/utils/scripts/toggle-plasma-bluetooth.sh"]);
+            }
+        }
     }
+}
 
     Column {
         id: devices
