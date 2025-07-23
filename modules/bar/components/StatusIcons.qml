@@ -53,7 +53,7 @@ Item {
         text: Bluetooth.defaultAdapter?.enabled ? "bluetooth" : "bluetooth_disabled"
         color: root.colour
 
-        MouseArea {
+    MouseArea {
         anchors.fill: parent
         acceptedButtons: Qt.LeftButton
 
@@ -64,6 +64,7 @@ Item {
         }
     }
 }
+
 
     Column {
         id: devices
