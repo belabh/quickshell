@@ -50,7 +50,7 @@ Item {
         anchors.topMargin: Appearance.spacing.smaller / 2
 
         animate: true
-        text: Bluetooth.defaultAdapter.enabled ? "bluetooth" : "bluetooth_disabled"
+        text: Bluetooth.defaultAdapter?.enabled ? "bluetooth" : "bluetooth_disabled"
         color: root.colour
 
         MouseArea {
