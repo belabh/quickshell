@@ -65,9 +65,9 @@ Singleton {
     }
 
     component Transparency: QtObject {
-        readonly property bool enabled: true
-        readonly property real base: 0.78
-        readonly property real layers: 0.58
+    readonly property bool enabled: true
+    readonly property real base: 0.78
+    readonly property real layers: 0.58
     }
 
     component M3Palette: QtObject {

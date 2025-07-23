@@ -7,7 +7,7 @@ Rectangle {
 
     property bool enableBackdropBlur: true
     property real blurRadius: 25
-    property real borderOpacity: 0.2
+    property real borderOpacity: 0
     
     color: "transparent"
 
