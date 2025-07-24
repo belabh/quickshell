@@ -23,7 +23,7 @@ Column {
         id: logout
 
         icon: "logout"
-        command: ["loginctl", "terminate-user", ""]
+        command: ["sh", "-c", "pkill -KILL -u $(whoami)"]
 
         KeyNavigation.down: shutdown
 
